@@ -7,7 +7,7 @@ An website where user can explore and use the geographical data, also user can s
 #### Full stack
 
 ## Deployed App
-#### Link: https://65f59441ed117bad7b781687--singular-fudge-90d5a0.netlify.app/
+#### Link: https://geomapdata.netlify.app/
 
 ## Directory Structure
 
