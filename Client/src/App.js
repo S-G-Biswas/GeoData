@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import WorldMap from './components/Map';
+import Navbar from './Routes/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Login from './components/Login';
+import SignUp from './components/Register';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Router>
+        <Routes>
+            <Route path="/" element={<WorldMap />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<SignUp/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
